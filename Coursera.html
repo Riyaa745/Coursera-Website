@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 2(Coursera)</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        :root {
+            --primary-color: #0062e4;
+            --secondary-color: white;
+            --bs-black: black;
+            --bs-voilet: #340385;
+            --bs-lightb: #e8eef7;
+            --bs-grey: #454343;
+            --bs-light-grey: rgb(128 128 128);
+            --bs-bline-grey: #80808091;
+            --bs-transparent-black: #00000024;
+            --bs-light-black: #000000a1;
+
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav_bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .nav_logo {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .nav_logo a {
+            text-decoration: none;
+            color: var(--bs-light-black);
+        }
+
+        .login a {
+            color: var(--primary-color);
+        }
+
+        .para_col {
+            color: var(--primary-color);
+
+        }
+
+        .btn {
+            border: 2px solid var(--primary-color);
+            border-radius: 3px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 9px 0;
+            width: 6rem;
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        .Explore_btn {
+            font-weight: 500;
+        }
+
+        .search {
+            height: 3rem;
+            border: 2px solid var(--bs-transparent-black);
+            border-radius: 36px;
+            width: 23rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .search input {
+            border: none;
+            width: 18rem;
+        }
+
+        .search i {
+            border-radius: 18px;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            padding: 9px;
+        }
+
+        .coursera_para {
+            width: 28rem;
+            margin: 4rem 14rem;
+        }
+
+        .coursera_para h1 {
+            font-size: 4rem;
+        }
+
+        .coursera_para p {
+            line-height: 1.5rem;
+            padding: 1rem 0;
+        }
+
+        .btn2 {
+            padding: 17px 0;
+            width: 10rem;
+            font-size: 1rem;
+        }
+
+        .btn_btn {
+            width: 17rem;
+            margin-left: 5px
+        }
+
+        .btn_btn2 {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .container2 {
+            background-color: rgb(128 128 128 / 14%);
+            height: 15rem;
+            text-align: center;
+            line-height: 9rem;
+            font-size: 1.2rem;
+        }
+
+        .coursera_icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .container_margin {
+            margin: 4rem 6rem;
+        }
+
+        .heads {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .para_arrow {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .para_arrow i {
+            font-size: 1.5rem;
+            color: var(--bs-light-black);
+        }
+
+        .nav_bar2 {
+            display: flex;
+            gap: 3rem;
+            padding-top: 1rem;
+        }
+
+        .nav_bar2 a {
+            color: var(--bs-black);
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .box_margin {
+            padding-top: 2rem;
+        }
+
+        .median_salary_box {
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--bs-bline-grey);
+        }
+
+        .btn_salary {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .para1 {
+            background-color: var(--bs-lightb);
+            color: var(--bs-grey);
+            padding: 0.5rem 10rem 0.5rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .para2 {
+            background-color: var(--bs-voilet);
+            color: var(--secondary-color);
+            padding: 0.5rem 12rem 0.5rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .para_median {
+            margin-top: 3rem;
+            line-height: 2.5rem;
+        }
+
+        .para_median_col {
+            color: var(--bs-grey);
+        }
+
+        .para_median_col1 {
+            color: var(--bs-black);
+            font-weight: 700;
+        }
+
+        .para1_median {
+            display: flex;
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        #img_img {
+            width: 70px;
+        }
+
+        .para3 {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1rem 0 0 1rem;
+        }
+
+        .para3_col {
+            color: var(--bs-light-grey);
+            line-height: 1.5rem;
+        }
+
+        .card_row {
+            box-shadow: 0px 0px 10px var(--bs-transparent-black);
+            border-radius: 10px;
+            width: 22rem;
+            height: 24.6rem;
+        }
+
+        .img_row {
+            width: 100%;
+            height: 14rem;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .content_row {
+            padding: 1rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .para_row {
+            line-height: 3rem;
+        }
+
+        .mg_icon_row {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .mg_icon_row img {
+            border: 1px solid var(--bs-transparent-black);
+            border-radius: 4px;
+            width: 2rem;
+        }
+
+        .para1_row {
+            line-height: 2rem;
+        }
+
+        .review_row {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .main_cardbox {
+            display: flex;
+            gap: 2rem;
+            width: 46rem;
+        }
+
+        .coursera_box2 {
+            display: flex;
+            gap: 2rem;
+            border-bottom: 1px solid var(--bs-bline-grey);
+            padding-bottom: 2rem;
+        }
+
+        .bottom_row {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+
+
+        .coursera_box {
+            border: 2px solid var(--bs-lightb);
+            border-radius: 5px;
+            padding: 3rem 4rem;
+            margin-top: 1rem;
+        }
+
+        .main_cardbox {
+            margin-top: 1rem;
+        }
+
+        .bottom_box {
+            width: 77rem;
+            padding-top: 2rem;
+        }
+
+        .container_top {
+            line-height: 3rem;
+        }
+
+        .color_para {
+            color: var(--bs-voilet);
+            font-weight: 600;
+        }
+
+        .para_size {
+            font-size: 1.3rem;
+        }
+
+        .container4_top h2 {
+            font-size: 2.4rem;
+            font-weight: 100;
+        }
+
+        .card1_row1 {
+            box-shadow: 0 0 1px var(--bs-transparent-black);
+            border: 2px solid var(--bs-lightb);
+            border-radius: 10px;
+            width: 21rem;
+            height: 23rem;
+        }
+
+        .card1_img {
+            width: 100%;
+            height: 13rem;
+            padding: 11px;
+            border-radius: 1.2rem;
+        }
+
+        .content_row1 {
+            padding: 0rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .icon_row {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .icon_row i {
+            border: 2px solid var(--primary-color);
+            width: 2rem;
+            height: 27px;
+            border-radius: 3px;
+            color: var(--primary-color);
+            padding-left: 0.8rem;
+        }
+
+        .coursera_card1 {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .container4_bottom {
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 20rem;
+        }
+
+        .bottom_btn {
+            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .bottom_btn1 {
+            border: none;
+            color: var(--primary-color);
+            background-color: var(--secondary-color);
+            font-size: 1rem;
+        }
+
+        .c4_bottom_box {
+            border: 2px solid var(--primary-color);
+            padding: 1rem;
+            width: 9rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .c4_bottom_box i {
+            color: var(--primary-color);
+        }
+
+        .container5 {
+            display: flex;
+            background-color: var(--bs-lightb);
+            padding: 3.8rem 3rem;
+            border-radius: 1rem;
+            background-image: url(images/bg_img\ conatiner5.png);
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+
+        .container5_para h1 {
+            font-size: 1.7rem;
+        }
+
+        .container5_para p {
+            padding: 1.3rem 0;
+            line-height: 23px;
+            font-size: 17px;
+        }
+
+        .c5_btn2 {
+            padding: 0.4rem 0.7rem;
+            border-radius: 4rem;
+            background-color: var(--secondary-color);
+            border: 1px solid var(--bs-light-grey);
+            font-weight: 600;
+        }
+
+        .coursera_card2 {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .card2_row2 {
+            box-shadow: 0px 0px 5px var(--bs-transparent-black);
+            border-radius: 15px;
+            width: 18.6rem;
+            height: 18.5rem;
+            background-color: var(--secondary-color);
+        }
+
+        .card2_img {
+            width: 100%;
+            height: 12rem;
+            padding: 0.8rem;
+            border-radius: 20px;
+        }
+
+        .c6_row1 {
+            height: 25.6rem;
+        }
+
+        .para_roww {
+            /* line-height: 89px; */
+        }
+
+        .content_row2 {
+            padding: 0rem 1rem;
+        }
+
+        .para_c8_9 {
+            font-size: 14px;
+        }
+
+        .head_c8_9 {
+            font-size: 15px;
+        }
+        .head_c8{
+            line-height: 1rem;
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav_bar">
+        <div class="nav_logo">
+            <span class="para_col">
+                <h2>Coursera</h2>
+            </span>
+            <button class="btn Explore_btn">Explore</button>
+            <div class="search">
+                <input type="search" placeholder="What do you want to learn?">
+                <i class="ri-search-line"></i>
+            </div>
+        </div>
+        <div class="nav_logo">
+            <a href="#">Online Degrees</a>
+            <a href="#">Find your new career</a>
+            <span class="login"><a href="#">Log In</a></span>
+            <button class="btn">Join for Free</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="coursera_para">
+            <h1>Learn without limits</h1>
+            <p>Start, switch, or advance your career with more than 7,000 courses, Professional Certificates, and
+                degrees
+                from world-class universities and companies.</p>
+            <div class="coursera_btn">
+                <button class="btn btn2 btn_btn2">Join For Free</button>
+                <button class="btn btn2 btn_btn">Try coursera for buisness</button>
+            </div>
+        </div>
+        <div class="coursera_img">
+            <img src="images/CourseraLearners_C_Composition_Hillary_copy__3_.png" alt="error">
+        </div>
+    </div>
+    <div class="container2">
+        <h2>We collaborate with <span class="para_col">325+ leading universities and companies</span></h2>
+        <div class="coursera_icon">
+            <img src="images/illinois-3.png">
+            <img src="images/duke-3.png">
+            <img src="images/google.png">
+            <img src="images/umich.jpeg">
+            <img src="images/1000px-IBM_logo.svg.png">
+            <img src="images/imperial.png">
+            <img src="images/stanford.png">
+            <img src="images/penn.png">
+        </div>
+    </div>
+    <div class="container3 container_margin">
+        <div class="heads">
+            <h1>Launch a new career in as little as 6 months</h1>
+            <span class="para_arrow">
+                <p>View all roles</p>
+                <i class="ri-arrow-right-line"></i>
+            </span>
+        </div>
+        <div class="nav_bar2">
+            <a href="#">Project Manager</a>
+            <a href="#">Data Analyst</a>
+            <a href="#">Digital Marketer</a>
+            <a href="#">IT Support Specialist</a>
+            <a href="#">Business Analyst</a>
+            <a href="#">Cybersecurity</a>
+            <a href="#">Front-End Developer</a>
+            <a href="#">UX Designer</a>
+
+        </div>
+        <div class="coursera_box">
+            <h2>Project Manager</h2>
+            <p class="para3_col">Oversee the planning and execution of projects to ensure they’re successful</p>
+            <div class="coursera_box2">
+                <div class="box_median box_margin">
+                    <div class="median_salary_box">
+                        <h4>Median Salary</h4>
+                        <div class="btn_salary">
+                            <p class="para1">All Occupations</p>
+                            <p class="para3_col">$37,960</p>
+                        </div>
+                        <div class="btn_salary">
+                            <p class="para2">Project Manager</p>
+                            <p class="para3_col">$102,800</p>
+                        </div>
+                    </div>
+                    <div class="para_median">
+                        <p class="para_median_col">Job openings: <span class="para_median_col1">336,402**</span></p>
+                        <p class="para_median_col">Projected 10 year growth: <span
+                                class="para_median_col1">+11.1%***</span>p
+                    </div>
+                    <div class="para1_median">
+                        <img src="images/adrienne_testimonial_image.jpg" id="img_img">
+                        <div class="para3">
+                            <p class="para3_col">"Earning my Google Project Management: Professional Certificate is one
+                                of the biggest
+                                accomplishments I’ve made in my education, and it was a key stepping stone to my new
+                                career."
+                            </p>
+                            <p class="para3_col">– Adrienne </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_box box_margin">
+                    <h3>Recommended Professional Certificates</h3>
+                    <div class="main_cardbox">
+                        <div class="card_row">
+                            <img src="images/Project-management-professional-certificate-SP-Logo.jpeg" class="img_row">
+                            <div class="content_row">
+                                <div class="para_row">
+                                    <div class="mg_icon_row">
+                                        <img src="images/Microsoft.jpeg">
+                                        <p class="para3_col">Microsoft</p>
+                                    </div>
+                                    <h3>Microsoft Project Management</h3>
+                                </div>
+                                <div class="para1_row">
+                                    <div class="review_row">
+                                        <h4>4.6</h4>
+                                        <span class="para_col"><i class="ri-star-fill"></i></span>
+                                        <p class="para3_col">(84 reviews)</p>
+                                    </div>
+                                    <p class="para3_col">Beginner.Professional Certificate.4 months</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_row">
+                            <img src="images/1060x596_GCC-photos_Ashley.jpeg" class="img_row">
+                            <div class="content_row">
+                                <div class="para_row">
+                                    <div class="mg_icon_row">
+                                        <img src="images/Google-G_360x360.jpeg">
+                                        <p class="para3_col">Google</p>
+                                    </div>
+                                    <h3>Google Project Management</h3>
+                                </div>
+                                <div class="para1_row">
+                                    <div class="review_row">
+                                        <h4>4.8</h4>
+                                        <span class="para_col"><i class="ri-star-fill"></i></span>
+                                        <p class="para3_col">(104k reviews)</p>
+                                    </div>
+                                    <p class="para3_col">Beginner.Professional Certificate.6 months</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom_row para_arrow">
+                        <h3>Explore all certificates</h3>
+                        <i class="ri-arrow-right-line"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_box">
+                <p class="para3_col">* Employment, Wages, and Projected Change in Employment by Typical Entry-level
+                    Education : U.S. Bureau of Labor Statistics. Sept. 2022,
+                    www.bls.gov/emp/tables/education-summary.htm</p>
+                <p class="para3_col"> ** Median salary and job opening data are sourced from United States Lightcast™
+                    Job Postings Report.
+                    Data for job roles relevant to featured programs (7/1/2022 - 6/30/2023)</p>
+                <p class="para3_col"> *** Growth rate data is sourced from United States Lightcast™ Job Postings Report.
+                    Data for job
+                    roles relevant to featured programs (7/1/2022 - 6/30/2023)</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="container4 container_margin">
+        <div class="container_top">
+            <p class="para_size color_para">Specializations and Professional Certificates</p>
+            <h1>Most Popular Certificates</h1>
+            <p class="para_size">Explore our most popular programs, get job-ready for an in-demand career.</p>
+        </div>
+        <div class="coursera_card1">
+            <div class="card1_row1">
+                <img src="images/photos_Karrim_card1_1.jpeg" class="card1_img">
+                <div class="content_row1">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/Google-G_360x360.jpeg">
+                            <p class="para3_col">Google</p>
+                        </div>
+                        <h3>Google Data Analytics</h3>
+                    </div>
+                    <div class="para1_row">
+                        <div class="icon_row">
+                            <i class="ri-lightbulb-line"></i>
+                            <p class="para_col">Make progress toward a degree</p>
+                        </div>
+                        <p class="para3_col">Professional Certificate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card1_row1">
+                <img src="images/photos_Ashley _card1(1).jpeg" class="card1_img">
+                <div class="content_row1">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/Google-G_360x360.jpeg">
+                            <p class="para3_col">Google</p>
+                        </div>
+                        <h3>Google Project Management</h3>
+                    </div>
+
+                    <div class="para1_row">
+                        <div class="icon_row">
+                            <i class="ri-lightbulb-line"></i>
+                            <p class="para_col">Make progress toward a degree</p>
+                        </div>
+                        <p class="para3_col">Professional Certificate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card1_row1">
+                <img src="images/Search-Thumbnail_card1 3.jpg" class="card1_img">
+                <div class="content_row1">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/Google-G_360x360.jpeg">
+                            <p class="para3_col">Google</p>
+                        </div>
+                        <h3>Google IT Support</h3>
+                    </div>
+                    <div class="para1_row">
+                        <div class="icon_row">
+                            <i class="ri-lightbulb-line"></i>
+                            <p class="para_col">Make progress toward a degree</p>
+                        </div>
+                        <p class="para3_col">Professional Certificate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card1_row1">
+                <img src="images/iStock-1169539468 card1 4.jpg" class="card1_img">
+                <div class="content_row1">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/IBM_IBM.png">
+                            <p class="para3_col">IBM</p>
+                        </div>
+                        <h3>IBM Data Science</h3>
+                    </div>
+                    <div class="para1_row">
+                        <div class="icon_row">
+                            <i class="ri-lightbulb-line"></i>
+                            <p class="para_col">Make progress toward a degree</p>
+                        </div>
+                        <p class="para3_col">Professional Certificate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container4_bottom">
+            <button class="bottom_btn">Show 8 more</button>
+            <div class="c4_bottom_box">
+                <button class="bottom_btn1">View All</button>
+                <i class="ri-arrow-right-line"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container5 container_margin">
+        <div class="container5_para">
+            <h1>Get started with GenAI</h1>
+            <p>Identify, develop and execute impactful GenAI business strategies.</p>
+            <button class="bottom_btn">View all GenAI</button>
+        </div>
+        <div class="conatiner5_card">
+            <div class="c5_card_navbar3">
+                <button class="c5_btn2">Beginner</button>
+                <button class="c5_btn2">Popular</button>
+                <button class="c5_btn2">New</button>
+                <button class="c5_btn2">Tools</button>
+            </div>
+            <div class="coursera_card2">
+                <div class="card2_row2">
+                    <img src="images/GenAI_card2 1.jpg" class="card2_img">
+                    <div class="content_row1">
+                        <div class="para_row">
+                            <div class="mg_icon_row">
+                                <img src="images/IBM_IBM.png">
+                                <p class="para3_col">IBM</p>
+                            </div>
+                        </div>
+                        <h4>Generative AI Fundamentals</h4>
+                        <p>Specialization</p>
+                    </div>
+                </div>
+                <div class="card2_row2">
+                    <img src="images/ddeep learning card2 2.jpeg" class="card2_img">
+                    <div class="content_row1">
+                        <div class="para_row">
+                            <div class="mg_icon_row">
+                                <img src="images/Icon.png">
+                                <p class="para3_col">DeepLearning.AI</p>
+                            </div>
+                        </div>
+                        <h4>AI for Good</h4>
+                        <p>Specialization</p>
+                    </div>
+                </div>
+                <div class="card2_row2">
+                    <img src="images/Navigating-GenAI card2_3.jpeg" class="card2_img">
+                    <div class="content_row1">
+                        <div class="para_row">
+                            <div class="mg_icon_row">
+                                <img src="images/coursera-wordmark-logo-full-rgb.jpeg">
+                                <p class="para3_col">Coursera</p>
+                            </div>
+                        </div>
+                        <h4>Navigating Generative AI for Leaders</h4>
+                        <p>Specialization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container6 container_margin">
+        <div class="container_top">
+            <p class="para_size color_para">Courses and Professional Certificates</p>
+            <h1>New on Coursera</h1>
+            <p class="para_size">Explore our newest programs, focused on delivering in-demand skills.</p>
+        </div>
+        <div class="coursera_card1">
+            <div class="card1_row1 c6_row1">
+                <img src="images/container6 card1_1img.jpeg" class="card1_img">
+                <div class="content_row1">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/Microsoft.jpeg">
+                            <p class="para3_col">Microsoft</p>
+                        </div>
+                        <h3>Microsoft UX Design</h3>
+                    </div>
+                    <p class="para3_col">Professional Certificate</p>
+                </div>
+            </div>
+            <div class="card1_row1 c6_row1">
+                <img src="images/c6_carrd2img.jpeg" class="card1_img">
+                <div class="content_row1">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/gc-logo-360x360.png">
+                            <p class="para3_col">Google Cloud</p>
+                        </div>
+                        <h3>Google Cloud Data Analytics</h3>
+                    </div>
+                    <p class="para3_col">Professional Certificate</p>
+                </div>
+            </div>
+            <div class="card1_row1 c6_row1">
+                <img src="images/Project-management-professional-certificate-SP-Logo.jpeg" class="card1_img">
+                <div class="content_row1">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/Microsoft.jpeg">
+                            <p class="para3_col">Microsoft</p>
+                        </div>
+                        <h3>Microsoft Project Management</h3>
+                    </div>
+                    <p class="para3_col">Professional Certificate</p>
+                </div>
+            </div>
+            <div class="card1_row1 c6_row1">
+                <img src="images/c6_carrd2img.jpeg" class="card1_img">
+                <div class="content_row1">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/gc-logo-360x360.png">
+                            <p class="para3_col">Google Cloud </p>
+                        </div>
+                        <h3>Google Cloud Cybersecurity</h3>
+                    </div>
+                    <div class="para1_row">
+                        <p class="para3_col">Professional Certificate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container4_bottom">
+            <button class="bottom_btn">Show 8 more</button>
+            <div class="c4_bottom_box">
+                <button class="bottom_btn1">View All</button>
+                <i class="ri-arrow-right-line"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container7 container_margin">
+        <div class="container_top">
+            <p class="para_size color_para">100% Free</p>
+            <h1>Start learning with free courses</h1>
+            <p class="para_size">Explore free online courses from the world's top universities and companies.</p>
+        </div>
+        <div class="coursera_card1">
+            <div class="card1_row1 c6_row1">
+                <img src="images/c6_carrd2img.jpeg" class="card1_img">
+                <div class="content_row1">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/gc-logo-360x360.png">
+                            <p class="para3_col">Google Cloud</p>
+                        </div>
+                        <h3>Microsoft UX Design</h3>
+                    </div>
+                    <p class="para3_col">Course</p>
+                </div>
+            </div>
+            <div class="card1_row1 c6_row1">
+                <img src="images/c7_card1img.jpg" class="card1_img">
+                <div class="content_row1">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/c7logo2.png">
+                            <p class="para3_col">University of Pennsylvania</p>
+                        </div>
+                        <h3>English for Career Development</h3>
+                    </div>
+                    <p class="para3_col">Course</p>
+                </div>
+            </div>
+            <div class="card1_row1 c6_row1">
+                <img src="images/c7_card_img2.jpeg" class="card1_img">
+                <div class="content_row1">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/c7_logo3.png">
+                            <p class="para3_col">Yale University</p>
+                        </div>
+                        <h3>Financial Markets</h3>
+                    </div>
+                    <p class="para3_col">Course</p>
+                </div>
+            </div>
+            <div class="card1_row1 c6_row1">
+                <img src="images/c7_card_img3.jpeg" class="card1_img">
+                <div class="content_row1">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/c7_logo4.png">
+                            <p class="para3_col">Johns Hopkins University </p>
+                        </div>
+                        <h3 class="para_roww">buisness Analytics with Excel:
+                            Elementary To Advanced</h3>
+                    </div>
+                    <div class="para1_row">
+                        <p class="para3_col">Course</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container4_bottom">
+            <button class="bottom_btn">Show 8 more</button>
+            <div class="c4_bottom_box">
+                <button class="bottom_btn1">View All</button>
+                <i class="ri-arrow-right-line"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container8 container_margin">
+        <div class="container_top">
+            <p class="para_size color_para">Degree Programs</p>
+            <h1>Get a head start on a degree today</h1>
+            <p class="para_size">With these programs, you can build valuable skills, earn career credentials, and make
+                progress toward a degree before you even enroll.</p>
+        </div>
+        <div class="coursera_card1">
+            <div class="card1_row1 c6_row1">
+                <img src="images/c8_card1.jpg" class="card1_img">
+                <div class="content_row2">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/c8_logo1.png">
+                            <p class="para3_col para_c8_9">University of Illinois Urbana-Champaign</p>
+                        </div>
+                        <h3 class="head_c8_9">Master Of Buisness Administration(iMBA)</h3>
+                    </div>
+                    <div class="para1_row">
+                        <div class="icon_row">
+                            <i class="ri-graduation-cap-line"></i>
+                            <p class="para_col">Earn a Degree</p>
+                        </div>
+                        <p class="para3_col">Degree</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card1_row1 c6_row1">
+                <img src="images/c8_card2.jpeg" class="card1_img">
+                <div class="content_row2">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/c8_logo2.png">
+                            <p class="para3_col para_c8_9">University of Colorado Boulder</p>
+                        </div>
+                        <h3 class="head_c8_9">Master of Science in Electrical Engineering</h3>
+                    </div>
+                    <div class="para1_row">
+                        <div class="icon_row">
+                            <i class="ri-graduation-cap-line"></i>
+                            <p class="para_col">Earn a Degree</p>
+                        </div>
+                        <p class="para3_col">Degree</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card1_row1 c6_row1">
+                <img src="images/c7_card_img2.jpeg" class="card1_img">
+                <div class="content_row2">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/c8_logo2.png">
+                            <p class="para3_col para_c8_9">University of Colorado Boulder</p>
+                        </div>
+                        <h3 class="head_c8_9 head_c8">Master of Engineering in Engineering Management</h3>
+                    </div>
+                    <div class="para1_row">
+                        <div class="icon_row">
+                            <i class="ri-graduation-cap-line"></i>
+                            <p class="para_col">Earn a Degree</p>
+                        </div>
+                        <p class="para3_col">Degree</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card1_row1 c6_row1">
+                <img src="images/c7_card_img3.jpeg" class="card1_img">
+                <div class="content_row2">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/c8_logo2.png">
+                            <p class="para3_col para_c8_9">Johns Hopkins University </p>
+                        </div>
+                        <h3 class="para_roww head_c8_9">Master of Science in Data Science</h3>
+                    </div>
+                    <div class="para1_row">
+                        <div class="icon_row">
+                            <i class="ri-graduation-cap-line"></i>
+                            <p class="para_col">Earn a Degree</p>
+                        </div>
+                        <p class="para3_col">Degree</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container4_bottom">
+            <button class="bottom_btn">Show 8 more</button>
+            <div class="c4_bottom_box">
+                <button class="bottom_btn1">View All</button>
+                <i class="ri-arrow-right-line"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container9 container_margin">
+        <div class="container_top">
+            <p class="para_size color_para">Degree Program</p>
+            <h2>Find a top degree that fits your life</h2>
+            <p class="para_size">Breakthrough pricing on 100% online degrees from top universities.</p>
+        </div>
+        <div class="coursera_card1">
+            <div class="card1_row1 c6_row1">
+                <img src="images/c8_card1.jpg" class="card1_img">
+                <div class="content_row2">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/c9_logo3.png">
+                            <p class="para3_col para_c8_9">University of Illinois Urbana-Champaign</p>
+                        </div>
+                        <h3 class="head_c8_9">Master Of Buisness Administration(iMBA)</h3>
+                    </div>
+                    <div class="para1_row">
+                        <div class="icon_row">
+                            <i class="ri-graduation-cap-line"></i>
+                            <p class="para_col">Earn a Degree</p>
+                        </div>
+                        <p class="para3_col">Degree</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card1_row1 c6_row1">
+                <img src="images/c9_card2.jpg" class="card1_img">
+                <div class="content_row2">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/c9_logo2.png">
+                            <p class="para3_col para_c8_9">Indian Statistical Institute</p>
+                        </div>
+                        <h3 class="head_c8_9">Postgraduate Diploma in Applied Statistics</h3>
+                    </div>
+                    <div class="para1_row">
+                        <div class="icon_row">
+                            <i class="ri-graduation-cap-line"></i>
+                            <p class="para_col">Earn a Degree</p>
+                        </div>
+                        <p class="para3_col">Degree</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card1_row1 c6_row1">
+                <img src="images/c9_card3.jpg" class="card1_img">
+                <div class="content_row2">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/c9_logo.png">
+                            <p class="para3_col para_c8_9">Indian Institute of Technology Guwahati</p>
+                        </div>
+                        <h3 class="head_c8_9">Bachelor of Science in Computer Science</h3>
+                    </div>
+                    <div class="para1_row">
+                        <div class="icon_row">
+                            <i class="ri-graduation-cap-line"></i>
+                            <p class="para_col">Earn a Degree</p>
+                        </div>
+                        <p class="para3_col">Degree</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card1_row1 c6_row1">
+                <img src="images/c9-.jpg" class="card1_img">
+                <div class="content_row2">
+                    <div class="para_row">
+                        <div class="mg_icon_row">
+                            <img src="images/c9_logo4.png">
+                            <p class="para3_col para_c8_9">University of London</p>
+                        </div>
+                        <h3 class="para_roww head_c8_9s">Master of Science in Data Science</h3>
+                    </div>
+                    <div class="para1_row">
+                        <div class="icon_row">
+                            <i class="ri-graduation-cap-line"></i>
+                            <p class="para_col">Earn a Degree</p>
+                        </div>
+                        <p class="para3_col">Degree</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container4_bottom">
+            <button class="bottom_btn">Show 8 more</button>
+            <div class="c4_bottom_box">
+                <button class="bottom_btn1">View All</button>
+                <i class="ri-arrow-right-line"></i>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
