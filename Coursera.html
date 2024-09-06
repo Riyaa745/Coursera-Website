@@ -38,6 +38,9 @@
             align-items: center;
             gap: 1.5rem;
         }
+        .nav_logo h2{
+            font-size: 2.7rem;
+        }
 
         .nav_logo a {
             text-decoration: none;
@@ -60,7 +63,6 @@
             color: var(--primary-color);
             padding: 9px 0;
             width: 6rem;
-            cursor: pointer;
             font-weight: 700;
         }
 
@@ -106,12 +108,12 @@
 
         .btn2 {
             padding: 17px 0;
-            width: 10rem;
+            width: 12rem;
             font-size: 1rem;
         }
 
         .btn_btn {
-            width: 17rem;
+            width: 15rem;
             margin-left: 5px
         }
 
@@ -121,16 +123,25 @@
             font-weight: bold;
         }
 
+        .container_point {
+            cursor: pointer;
+        }
+
         .container {
             display: flex;
         }
 
         .container2 {
             background-color: rgb(128 128 128 / 14%);
-            height: 15rem;
+            height: 18rem;
             text-align: center;
-            line-height: 9rem;
+            /* line-height: 9rem; */
             font-size: 1.2rem;
+            padding: 4rem 0;
+        }
+
+        .container2 h2 {
+            display: inline-block;
         }
 
         .coursera_icon {
@@ -138,6 +149,7 @@
             justify-content: center;
             align-items: center;
             gap: 2rem;
+            padding-top: 2rem;
         }
 
         .container_margin {
@@ -544,6 +556,35 @@
             border-radius: 4px 0 0 4px;
         }
 
+        .container12 {
+            background-color: var(--bs-lightb);
+            margin: 10rem 0rem 5rem 0rem;
+        }
+
+        .c12_box {
+            display: flex;
+            align-items: center;
+            padding-left: 6rem;
+            height: 29rem;
+        }
+
+        .c12_box img {
+            height: 107%;
+            transform: translateY(-18px);
+        }
+
+        .c12_para {
+            width: 38rem;
+            padding-left: 4rem;
+        }
+
+        .c12_paraa_c15 {
+            padding: 1.7rem 0rem;
+            font-size: 1.2rem;
+            width: 26rem;
+            line-height: 1.6rem;
+        }
+
         .c13_top {
             text-align: center;
             line-height: 3rem;
@@ -557,6 +598,7 @@
             padding-top: 3rem;
             display: flex;
             justify-content: space-around;
+            margin-bottom: 3rem;
         }
 
         .c13_card {
@@ -587,9 +629,86 @@
             text-align: center;
             line-height: 1.6rem;
         }
-        .c13_para p{
+
+        .c13_para p {
             font-size: 1.3rem;
         }
+
+        .container14 {
+            background-color: var(--bs-lightb);
+            padding: 5rem 0rem;
+        }
+
+        .c14_coursera {
+            display: flex;
+            margin: 0 16rem;
+            gap: 7rem;
+        }
+
+        .c14_card_para {
+            width: 30rem;
+        }
+
+        .c12_head_c14 {
+            font-size: 2.5rem;
+        }
+
+        .c14_card_para p {
+            padding: 2rem 0;
+            line-height: 18px;
+        }
+
+        .c14_grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding-top: 4rem;
+        }
+
+        .c14_btn {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            border: none;
+            border-radius: 3px;
+            padding: 16px;
+            font-weight: 600;
+        }
+
+        .c14_para {
+            display: flex;
+            align-items: center;
+            gap: 5px
+        }
+
+        .c14_img {
+            padding: 1rem;
+            height: 4rem;
+        }
+
+        .container15 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 4rem;
+        }
+        .container15 img{
+            transform: translateY(-69px);
+        }
+
+        .c15_para {
+            width: 25rem;
+            margin: 0 6rem;
+
+        }
+
+        .c15_btn {
+            background-color: var(--primary-color);
+            border: none;
+            padding: 1rem 2.2rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            border-radius: 4px;
+        }
+
     </style>
 </head>
 
@@ -597,9 +716,9 @@
     <div class="nav_bar">
         <div class="nav_logo">
             <span class="para_col">
-                <h2>Coursera</h2>
+                <h2 class="container_point">coursera</h2>
             </span>
-            <button class="btn Explore_btn">Explore</button>
+            <button class="btn Explore_btn container_point">Explore</button>
             <div class="search">
                 <input type="search" placeholder="What do you want to learn?">
                 <i class="ri-search-line"></i>
@@ -609,7 +728,7 @@
             <a href="#">Online Degrees</a>
             <a href="#">Find your new career</a>
             <span class="login"><a href="#">Log In</a></span>
-            <button class="btn">Join for Free</button>
+            <button class="btn container_point">Join for Free</button>
         </div>
     </div>
     <div class="container">
@@ -619,8 +738,8 @@
                 degrees
                 from world-class universities and companies.</p>
             <div class="coursera_btn">
-                <button class="btn btn2 btn_btn2">Join For Free</button>
-                <button class="btn btn2 btn_btn">Try coursera for buisness</button>
+                <button class="btn btn2 btn_btn2 container_point">Join For Free</button>
+                <button class="btn btn2 btn_btn container_point">Try coursera for buisness</button>
             </div>
         </div>
         <div class="coursera_img">
@@ -628,22 +747,23 @@
         </div>
     </div>
     <div class="container2">
-        <h2>We collaborate with <span class="para_col">325+ leading universities and companies</span></h2>
+        <h2 class="container_point">We collaborate with <span class="para_col">325+ leading universities and
+                companies</span></h2>
         <div class="coursera_icon">
-            <img src="images/illinois-3.png">
-            <img src="images/duke-3.png">
-            <img src="images/google.png">
-            <img src="images/umich.jpeg">
-            <img src="images/1000px-IBM_logo.svg.png">
-            <img src="images/imperial.png">
-            <img src="images/stanford.png">
-            <img src="images/penn.png">
+            <img src="images/illinois-3.png" class="container_point">
+            <img src="images/duke-3.png" class="container_point">
+            <img src="images/google.png" class="container_point">
+            <img src="images/umich.jpeg" class="container_point">
+            <img src="images/1000px-IBM_logo.svg.png" class="container_point">
+            <img src="images/imperial.png" class="container_point">
+            <img src="images/stanford.png" class="container_point">
+            <img src="images/penn.png" class="container_point">
         </div>
     </div>
     <div class="container3 container_margin">
         <div class="heads">
             <h1>Launch a new career in as little as 6 months</h1>
-            <span class="para_arrow">
+            <span class="para_arrow container_point">
                 <p>View all roles</p>
                 <i class="ri-arrow-right-line"></i>
             </span>
@@ -695,7 +815,7 @@
                 <div class="card_box box_margin">
                     <h3>Recommended Professional Certificates</h3>
                     <div class="main_cardbox">
-                        <div class="card_row">
+                        <div class="card_row container_point">
                             <img src="images/Project-management-professional-certificate-SP-Logo.jpeg" class="img_row">
                             <div class="content_row">
                                 <div class="para_row">
@@ -715,7 +835,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card_row">
+                        <div class="card_row container_point">
                             <img src="images/1060x596_GCC-photos_Ashley.jpeg" class="img_row">
                             <div class="content_row">
                                 <div class="para_row">
@@ -736,7 +856,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bottom_row para_arrow">
+                    <div class="bottom_row para_arrow container_point">
                         <h3>Explore all certificates</h3>
                         <i class="ri-arrow-right-line"></i>
                     </div>
@@ -763,7 +883,7 @@
             <p class="para_size">Explore our most popular programs, get job-ready for an in-demand career.</p>
         </div>
         <div class="coursera_card1">
-            <div class="card1_row1">
+            <div class="card1_row1 container_point">
                 <img src="images/photos_Karrim_card1_1.jpeg" class="card1_img">
                 <div class="content_row1">
                     <div class="para_row">
@@ -782,7 +902,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card1_row1">
+            <div class="card1_row1 container_point">
                 <img src="images/photos_Ashley _card1(1).jpeg" class="card1_img">
                 <div class="content_row1">
                     <div class="para_row">
@@ -802,7 +922,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card1_row1">
+            <div class="card1_row1 container_point">
                 <img src="images/Search-Thumbnail_card1 3.jpg" class="card1_img">
                 <div class="content_row1">
                     <div class="para_row">
@@ -821,7 +941,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card1_row1">
+            <div class="card1_row1 container_point">
                 <img src="images/iStock-1169539468 card1 4.jpg" class="card1_img">
                 <div class="content_row1">
                     <div class="para_row">
@@ -842,28 +962,28 @@
             </div>
         </div>
         <div class="container4_bottom">
-            <button class="bottom_btn">Show 8 more</button>
+            <button class="bottom_btn container_point">Show 8 more</button>
             <div class="c4_bottom_box">
-                <button class="bottom_btn1">View All</button>
+                <button class="bottom_btn1 container_point">View All</button>
                 <i class="ri-arrow-right-line"></i>
             </div>
         </div>
     </div>
     <div class="container5 container_margin">
         <div class="container5_para">
-            <h1>Get started with GenAI</h1>
+            <h2>Get started with GenAI</h2>
             <p>Identify, develop and execute impactful GenAI business strategies.</p>
-            <button class="bottom_btn">View all GenAI</button>
+            <button class="bottom_btn container_point">View all GenAI</button>
         </div>
         <div class="conatiner5_card">
             <div class="c5_card_navbar3">
-                <button class="c5_btn2">Beginner</button>
-                <button class="c5_btn2">Popular</button>
-                <button class="c5_btn2">New</button>
-                <button class="c5_btn2">Tools</button>
+                <button class="c5_btn2 container_point">Beginner</button>
+                <button class="c5_btn2 container_point">Popular</button>
+                <button class="c5_btn2 container_point">New</button>
+                <button class="c5_btn2 container_point">Tools</button>
             </div>
             <div class="coursera_card2">
-                <div class="card2_row2">
+                <div class="card2_row2 container_point">
                     <img src="images/GenAI_card2 1.jpg" class="card2_img">
                     <div class="content_row1">
                         <div class="para_row">
@@ -876,7 +996,7 @@
                         <p>Specialization</p>
                     </div>
                 </div>
-                <div class="card2_row2">
+                <div class="card2_row2 container_point">
                     <img src="images/ddeep learning card2 2.jpeg" class="card2_img">
                     <div class="content_row1">
                         <div class="para_row">
@@ -889,7 +1009,7 @@
                         <p>Specialization</p>
                     </div>
                 </div>
-                <div class="card2_row2">
+                <div class="card2_row2 container_point">
                     <img src="images/Navigating-GenAI card2_3.jpeg" class="card2_img">
                     <div class="content_row1">
                         <div class="para_row">
@@ -912,7 +1032,7 @@
             <p class="para_size">Explore our newest programs, focused on delivering in-demand skills.</p>
         </div>
         <div class="coursera_card1">
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/container6 card1_1img.jpeg" class="card1_img">
                 <div class="content_row1">
                     <div class="para_row">
@@ -925,7 +1045,7 @@
                     <p class="para3_col">Professional Certificate</p>
                 </div>
             </div>
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c6_carrd2img.jpeg" class="card1_img">
                 <div class="content_row1">
                     <div class="para_row">
@@ -938,7 +1058,7 @@
                     <p class="para3_col">Professional Certificate</p>
                 </div>
             </div>
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/Project-management-professional-certificate-SP-Logo.jpeg" class="card1_img">
                 <div class="content_row1">
                     <div class="para_row">
@@ -951,7 +1071,7 @@
                     <p class="para3_col">Professional Certificate</p>
                 </div>
             </div>
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c6_carrd2img.jpeg" class="card1_img">
                 <div class="content_row1">
                     <div class="para_row">
@@ -968,9 +1088,9 @@
             </div>
         </div>
         <div class="container4_bottom">
-            <button class="bottom_btn">Show 8 more</button>
+            <button class="bottom_btn container_point">Show 8 more</button>
             <div class="c4_bottom_box">
-                <button class="bottom_btn1">View All</button>
+                <button class="bottom_btn1 container_point">View All</button>
                 <i class="ri-arrow-right-line"></i>
             </div>
         </div>
@@ -982,7 +1102,7 @@
             <p class="para_size">Explore free online courses from the world's top universities and companies.</p>
         </div>
         <div class="coursera_card1">
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c6_carrd2img.jpeg" class="card1_img">
                 <div class="content_row1">
                     <div class="para_row">
@@ -995,7 +1115,7 @@
                     <p class="para3_col">Course</p>
                 </div>
             </div>
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c7_card1img.jpg" class="card1_img">
                 <div class="content_row1">
                     <div class="para_row">
@@ -1008,7 +1128,7 @@
                     <p class="para3_col">Course</p>
                 </div>
             </div>
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c7_card_img2.jpeg" class="card1_img">
                 <div class="content_row1">
                     <div class="para_row">
@@ -1021,7 +1141,7 @@
                     <p class="para3_col">Course</p>
                 </div>
             </div>
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c7_card_img3.jpeg" class="card1_img">
                 <div class="content_row1">
                     <div class="para_row">
@@ -1039,9 +1159,9 @@
             </div>
         </div>
         <div class="container4_bottom">
-            <button class="bottom_btn">Show 8 more</button>
+            <button class="bottom_btn container_point">Show 8 more</button>
             <div class="c4_bottom_box">
-                <button class="bottom_btn1">View All</button>
+                <button class="bottom_btn1 container_point">View All</button>
                 <i class="ri-arrow-right-line"></i>
             </div>
         </div>
@@ -1054,7 +1174,7 @@
                 progress toward a degree before you even enroll.</p>
         </div>
         <div class="coursera_card1">
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c8_card1.jpg" class="card1_img">
                 <div class="content_row2">
                     <div class="para_row">
@@ -1073,7 +1193,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c8_card2.jpeg" class="card1_img">
                 <div class="content_row2">
                     <div class="para_row">
@@ -1092,7 +1212,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c7_card_img2.jpeg" class="card1_img">
                 <div class="content_row2">
                     <div class="para_row">
@@ -1111,7 +1231,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c7_card_img3.jpeg" class="card1_img">
                 <div class="content_row2">
                     <div class="para_row">
@@ -1132,9 +1252,9 @@
             </div>
         </div>
         <div class="container4_bottom">
-            <button class="bottom_btn">Show 8 more</button>
+            <button class="bottom_btn container_point">Show 8 more</button>
             <div class="c4_bottom_box">
-                <button class="bottom_btn1">View All</button>
+                <button class="bottom_btn1 container_point">View All</button>
                 <i class="ri-arrow-right-line"></i>
             </div>
         </div>
@@ -1146,7 +1266,7 @@
             <p class="para_size">Breakthrough pricing on 100% online degrees from top universities.</p>
         </div>
         <div class="coursera_card1">
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c9_card3.jpg" class="card1_img">
                 <div class="content_row2">
                     <div class="para_row">
@@ -1165,7 +1285,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c9-.jpg" class="card1_img">
                 <div class="content_row2">
                     <div class="para_row">
@@ -1184,7 +1304,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c9_card4.jpg" class="card1_img">
                 <div class="content_row2">
                     <div class="para_row">
@@ -1203,7 +1323,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card1_row1 c6_row1">
+            <div class="card1_row1 c6_row1 container_point">
                 <img src="images/c9_card2.jpg" class="card1_img">
                 <div class="content_row2">
                     <div class="para_row">
@@ -1224,9 +1344,9 @@
             </div>
         </div>
         <div class="container4_bottom">
-            <button class="bottom_btn">Show 8 more</button>
+            <button class="bottom_btn container_point">Show 8 more</button>
             <div class="c4_bottom_box">
-                <button class="bottom_btn1">View All</button>
+                <button class="bottom_btn1 container_point">View All</button>
                 <i class="ri-arrow-right-line"></i>
             </div>
         </div>
@@ -1239,77 +1359,77 @@
     <div class="container11 container_margin">
         <h1>Explore Coursera</h1>
         <div class="c11_grid">
-            <div class="c11_card">
+            <div class="c11_card container_point">
                 <img src="images/c11data_science.jpeg" alt="">
                 <div class="c11_para">
                     <h3>Data Science</h3>
                     <h4>425 courses</h4>
                 </div>
             </div>
-            <div class="c11_card">
+            <div class="c11_card container_point">
                 <img src="images/c11business.jpeg" alt="">
                 <div class="c11_para">
                     <h3>Buisness</h3>
                     <h4>1095 courses</h4>
                 </div>
             </div>
-            <div class="c11_card">
+            <div class="c11_card container_point">
                 <img src="images/c11computer_science.jpeg" alt="">
                 <div class="c11_para">
                     <h3>Computer Science</h3>
                     <h4>668 courses</h4>
                 </div>
             </div>
-            <div class="c11_card">
+            <div class="c11_card container_point">
                 <img src="images/c11health.jpeg" alt="">
                 <div class="c11_para">
                     <h3>Health</h3>
                     <h4>471 courses</h4>
                 </div>
             </div>
-            <div class="c11_card">
+            <div class="c11_card container_point">
                 <img src="images/c11social_sciences.jpeg" alt="">
                 <div class="c11_para">
                     <h3>Social Sciences</h3>
                     <h4>401 courses</h4>
                 </div>
             </div>
-            <div class="c11_card">
+            <div class="c11_card container_point">
                 <img src="images/c11personal_development.jpeg" alt="">
                 <div class="c11_para">
                     <h3>Personal Development</h3>
                     <h4>137 courses</h4>
                 </div>
             </div>
-            <div class="c11_card">
+            <div class="c11_card container_point">
                 <img src="images/c11arts_and_humanities.jpeg" alt="">
                 <div class="c11_para">
                     <h3>Arts and Humanities</h3>
                     <h4>338 courses</h4>
                 </div>
             </div>
-            <div class="c11_card">
+            <div class="c11_card container_point">
                 <img src="images/c11physical_science_and_engineering.jpeg" alt="">
                 <div class="c11_para">
                     <h3>Physical Science and Engineering</h3>
                     <h4>413 courses</h4>
                 </div>
             </div>
-            <div class="c11_card">
+            <div class="c11_card container_point">
                 <img src="images/c11language_learning.jpeg" alt="">
                 <div class="c11_para">
                     <h3>Language learning</h3>
                     <h4>150 courses</h4>
                 </div>
             </div>
-            <div class="c11_card">
+            <div class="c11_card container_point">
                 <img src="images/c11information_technology.jpeg" alt="">
                 <div class="c11_para">
                     <h3>Information Technology</h3>
                     <h4>145 courses</h4>
                 </div>
             </div>
-            <div class="c11_card">
+            <div class="c11_card container_point">
                 <img src="images/c11math_and_logic.jpeg" alt="">
                 <div class="c11_para">
                     <h3>Math and Logic</h3>
@@ -1318,8 +1438,18 @@
             </div>
         </div>
     </div>
-    <div class="conatiner12 container_margin">
-
+    <div class="container12">
+        <div class="c12_box">
+            <img src="images/c12img.png">
+            <div class="c12_para">
+                <h1 class="c12_head_c14">Learner outcomes on Coursera</h1>
+                <p class="c12_paraa_c15"><strong>77% of learners report career benefits</strong>, such as new skills,
+                    increased pay, and new job
+                    opportunities.<a href="#"> 2023 Coursera Learner Outcomes Report
+                    </a> </p>
+                <button class="c15_btn container_point">Join for Free</button>
+            </div>
+        </div>
     </div>
     <div class="container13 container_margin">
         <div class="c13_top">
@@ -1340,30 +1470,105 @@
                 </div>
             </div>
             <div class="c13_card">
-                <img src="images/c13_img1.png">
-                <h3>Kenia R.</h3>
+                <img src="images/c13_img2.png">
+                <h3>Ryan L..</h3>
                 <p>United states</p>
                 <div class="c13_border"></div>
                 <div class="c13_para">
-                    <p>“Being a mother — especially a working mother means I’m constantly trying to juggle my schedule,
-                        my
-                        kids’ schedules, and work. I am very grateful for the flexible and remote learning programs that
-                        Coursera has to offer.”</p>
+                    <p>“From taking courses on Coursera, I gained a deep understanding of the UX Design process from
+                        start to finish. With the knowledge I gained, I feel prepared for entry-level jobs and
+                        internships. I've been able to apply the skills and knowledge I gained to multiple projects and
+                        work experiences.”</p>
                 </div>
             </div>
             <div class="c13_card">
-                <img src="images/c13_img1.png">
-                <h3>Kenia R.</h3>
-                <p>United states</p>
+                <img src="images/c13_img3.png">
+                <h3>Vishal V.</h3>
+                <p>India</p>
                 <div class="c13_border"></div>
                 <div class="c13_para">
-                    <p>“Being a mother — especially a working mother means I’m constantly trying to juggle my schedule,
-                        my
-                        kids’ schedules, and work. I am very grateful for the flexible and remote learning programs that
-                        Coursera has to offer.”</p>
+                    <p>“I really enjoyed my courses. The quizzes, videos, and quick labs provided helpful hands-on
+                        experience. Learning on Coursera has given me the confidence and ability to excel in my career.
+                        I love this feeling.”</p>
                 </div>
             </div>
 
+        </div>
+    </div>
+    <div class="container14">
+        <div class="c14_coursera">
+            <div class="c14_card_para">
+                <h1 class="c12_head_c14">The ideal solution for your business</h1>
+                <p>Get the world-class learning and development chosen by top organizations across the globe. All on
+                    Coursera for Business.</p>
+                <button class="c14_btn container_point">Discover Coursera for Buisness</button>
+                <div class="c14_para">
+                    <p>Upskill a small team?</p>
+                    <a href="#">Check out Coursera for Team ? </a>
+                </div>
+            </div>
+            <div class="c14_grid">
+                <div class="c14_img">
+                    <img src="images/c14_img1.png">
+                </div>
+                <div class="c14_img">
+                    <img src="images/c14_img2.png">
+                </div>
+                <div class="c14_img">
+                    <img src="images/c14_img.png">
+
+                </div>
+                <div class="c14_img">
+                    <img src="images/c14_img4.png">
+
+                </div>
+                <div class="c14_img">
+                    <img src="images/c14_img5.png">
+
+                </div>
+                <div class="c14_img">
+                    <img src="images/c14_img6.png">
+
+                </div>
+                <div class="c14_img">
+                    <img src="images/c14_img7.png">
+
+                </div>
+                <div>
+                    <img src="images/c14-img8.png">
+
+                </div>
+                <div class="c14_img">
+                    <img src="images/c14-img9.png">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container15 container_margin">
+        <img src="images/c15_img1.png">
+        <div class="c15_para">
+            <h1>Take the next step toward your personal and professional goals with Coursera.</h1>
+            <p class="c12_paraa_c15">Join now to receive personalized recommendations from the full Coursera catalog.
+            </p>
+            <button class="c15_btn container_point">Join for Free</button>
+        </div>
+    </div>
+    <div class="container16">
+        <div class="c16_grid">
+            <div class="c16_col">
+                <h2>Get Started with AI</h2>
+                <a href="#">AWS & DLAI GenAI with LLMs Course</a>
+                <a href="#">DLAI AI For Everyone Course</a>
+                <a href="#">DLAI Deep Learning Specialization</a>
+                <a href="#">DLAI NLP Specialization</a>
+                <a href="#">Google AI Essentials Course</a>
+                <a href="#">Google Cloud Introduction to Generative AI Course</a>
+                <a href="#">IBM Generative AI Fundamentals Specialization</a>
+                <a href="#">Stanford AI in Healthcare Specialization</a>
+                <a href="#">Stanford Machine Learning Specialization</a>
+                <a href="#">Vanderbilt Prompt Engineering for ChatGPT Course</a>
+            </div>
         </div>
     </div>
 </body>
