@@ -49,10 +49,14 @@
         .nav_logo a {
             text-decoration: none;
             color: var(--bs-light-black);
+
         }
 
         .login a {
             color: var(--primary-color);
+        }
+        .login a:hover{
+            text-decoration: 1.5px underline var(--primary-color);
         }
 
         .para_col {
@@ -68,6 +72,9 @@
             padding: 9px 0;
             width: 6rem;
             font-weight: 700;
+        }
+        .btn_nav:hover{
+            background-color: var(--bs-lightb);
         }
 
         .Explore_btn {
@@ -118,13 +125,25 @@
 
         .btn_btn {
             width: 15rem;
-            margin-left: 5px
+            margin-left: 5px;
+            transition: all 0.3s;
+
+        }
+
+        .btn_btn:hover {
+            background-color: var(--bs-lightb);
+
         }
 
         .btn_btn2 {
             background-color: var(--primary-color);
             color: var(--secondary-color);
             font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn_btn2:hover {
+            background-color: #0757bf;
         }
 
         .container_point {
@@ -170,6 +189,11 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            transition: all;
+        }
+
+        .para_arrow p:hover {
+            text-decoration: underline;
         }
 
         .para_arrow i {
@@ -186,7 +210,16 @@
         .nav_bar2 a {
             color: var(--bs-black);
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
+            height: auto;
+            width: auto;
+            padding: 8px;
+            transition: all;
+        }
+
+        .nav_bar2 a:hover {
+            background-color: var(--bs-lightb);
+            color: var(--primary-color);
         }
 
         .box_margin {
@@ -260,6 +293,13 @@
             border-radius: 10px;
             width: 22rem;
             height: 24.6rem;
+            transition: all 0.2s;
+        }
+
+        .card_row:hover {
+            transform: translateY(-16px);
+            box-shadow: 0px 0px 10px var(--bs-bline-grey);
+
         }
 
         .img_row {
@@ -320,6 +360,9 @@
             justify-content: end;
         }
 
+        .para_arrow h3:hover {
+            text-decoration: underline;
+        }
 
         .coursera_box {
             border: 2px solid var(--bs-lightb);
@@ -361,6 +404,11 @@
             border-radius: 10px;
             width: 21rem;
             height: 23rem;
+            transition: all 0.3s;
+        }
+
+        .card1_row1:hover {
+            transform: scale(1.03);
         }
 
         .card1_img {
@@ -412,6 +460,11 @@
             border: none;
             border-radius: 4px;
             font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .bottom_btn:hover {
+            background-color: #0757bf;
         }
 
         .bottom_btn1 {
@@ -419,6 +472,14 @@
             color: var(--primary-color);
             background-color: var(--secondary-color);
             font-size: 1rem;
+            transition: all 0.3s;
+
+        }
+
+        .bottom_btn1:hover {
+            text-decoration: underline;
+            background-color: var(--bs-lightb);
+
         }
 
         .c4_bottom_box {
@@ -427,6 +488,11 @@
             width: 9rem;
             border-radius: 4px;
             text-align: center;
+        }
+
+        .c4_bottom_box:hover {
+            background-color: var(--bs-lightb);
+
         }
 
         .c4_bottom_box i {
@@ -461,6 +527,12 @@
             font-weight: 600;
         }
 
+        .c5_btn2:hover {
+            background-color: var(--bs-lightb);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
         .coursera_card2 {
             display: flex;
             gap: 1.5rem;
@@ -473,6 +545,12 @@
             width: 18.6rem;
             height: 18.5rem;
             background-color: var(--secondary-color);
+            transition: all 0.3s;
+        }
+
+        .card2_row2:hover {
+            transform: scale(1.03);
+
         }
 
         .card2_img {
@@ -541,6 +619,10 @@
             align-items: center;
             gap: 1rem;
             border-radius: 4px;
+        }
+        .c11_card:hover{
+            box-shadow: 2px 2px 10px var(--bs-bline-grey);
+
         }
 
         .container_margin h1 {
@@ -675,6 +757,16 @@
             border-radius: 3px;
             padding: 16px;
             font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .c14_btn:hover {
+            background-color: #0757bf;
+            text-decoration: 1.8px underline;
+        }
+
+        .c14_para a:hover{
+            text-decoration: none;
         }
 
         .c14_para {
@@ -714,6 +806,10 @@
             border-radius: 4px;
         }
 
+        .c15_btn:hover {
+            background-color: #0757bf;
+        }
+
         .container16 {
             background-color: var(--bs-transparent-black);
             padding: 5rem 5rem 3.2rem 5rem;
@@ -738,6 +834,9 @@
             color: var(--bs-black);
             line-height: 2rem;
             font-size: 15px;
+        }
+        .c16_col a:hover{
+            text-decoration: underline;
         }
 
         .c6_col a {
@@ -777,14 +876,14 @@
             <button class="btn Explore_btn container_point">Explore</button>
             <div class="search">
                 <input type="search" placeholder="What do you want to learn?">
-                <i class="ri-search-line"></i>
+                <i class="ri-search-line container_point"></i>
             </div>
         </div>
         <div class="nav_logo">
             <a href="#">Online Degrees</a>
             <a href="#">Find your new career</a>
             <span class="login"><a href="#">Log In</a></span>
-            <button class="btn container_point">Join for Free</button>
+            <button class="btn btn_nav container_point">Join for Free</button>
         </div>
     </div>
     <div class="container">
@@ -1726,12 +1825,12 @@
         <div class="c16_footer">
             <p>© 2024 Coursera Inc. All rights reserved.</p>
             <div class="c16_footer_icons">
-                <i class="ri-facebook-fill"></i>
-                <i class="ri-linkedin-fill"></i>
-                <i class="ri-twitter-fill"></i>
-                <i class="ri-youtube-fill"></i>
-                <i class="ri-instagram-line"></i>
-                <i class="ri-tiktok-fill"></i>
+                <i class="ri-facebook-fill container_point"></i>
+                <i class="ri-linkedin-fill container_point"></i>
+                <i class="ri-twitter-fill container_point"></i>
+                <i class="ri-youtube-fill container_point"></i>
+                <i class="ri-instagram-line container_point"></i>
+                <i class="ri-tiktok-fill container_point"></i>
             </div>
         </div>
     </div>
