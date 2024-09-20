@@ -88,10 +88,11 @@
             height: 3rem;
             border: 2px solid var(--bs-transparent-black);
             border-radius: 36px;
-            width: 23rem;
+            width: 30rem;
             display: flex;
             align-items: center;
-            justify-content: space-around;
+            gap: 8rem;
+            padding-left: 1rem;
         }
 
         .search input {
@@ -334,10 +335,6 @@
             width: 2rem;
         }
 
-        .para1_row {
-            line-height: 2rem;
-        }
-
         .review_row {
             display: flex;
             align-items: center;
@@ -434,13 +431,14 @@
             gap: 7px;
         }
 
-        .icon_row i {
+        .icon_bulb {
+            display: flex;
+            justify-content: end;
             border: 2px solid var(--primary-color);
             width: 2rem;
-            height: 27px;
+            height: 20px;
             border-radius: 3px;
             color: var(--primary-color);
-            padding-left: 0.8rem;
         }
 
         .coursera_card1 {
@@ -476,6 +474,7 @@
             align-items: center;
             justify-content: center;
             padding: 0.5rem 2rem;
+            transition: all 0.3s;
         }
 
         .c4_bottom_box a {
@@ -519,6 +518,7 @@
             background-color: var(--secondary-color);
             border: 1px solid var(--bs-light-grey);
             font-weight: 600;
+            transition: all 0.3s;
         }
 
         .c5_btn2:hover {
@@ -556,7 +556,8 @@
         .c6_row1 {
             height: 21.6rem;
         }
-        .para_roww{
+
+        .para_roww {
             line-height: 1rem;
             padding-top: 1rem;
         }
@@ -806,21 +807,22 @@
 
         .container16 {
             background-color: var(--bs-transparent-black);
-            padding: 5rem 5rem 3.2rem 5rem;
         }
 
         .c16_grid {
             display: grid;
             grid-template-columns: repeat(4, 369px);
-            grid-template-rows: 461px;
-            border-bottom: 1px solid var(--bs-bline-grey);
-            padding-bottom: 4rem;
+            grid-template-rows: 438px;
+            padding: 4rem 0rem;
         }
 
         .c16_col {
             display: flex;
             flex-direction: column;
             line-height: 1.3rem;
+        }
+        .c16_col1{
+            padding-left: 4rem;
         }
 
         .c16_col a {
@@ -839,7 +841,9 @@
         }
 
         .c16_footer {
-            padding-top: 3rem;
+            padding: 3rem 0rem;
+            margin: 0rem 4rem;
+            border-top: 1px solid var(--bs-light-grey);
             display: flex;
             justify-content: space-between;
         }
@@ -849,10 +853,6 @@
             color: white;
             padding: 7px;
             border-radius: 2rem;
-            /* height: 38px;
-            width: 39px;
-            text-align: center;
-            font-size: 2rem; */
         }
 
         .c16_footer_icons {
@@ -1045,7 +1045,7 @@
                     </div>
                     <div class="para1_row">
                         <div class="icon_row">
-                            <i class="ri-lightbulb-line"></i>
+                            <span class="icon_bulb"><i class="ri-lightbulb-line"></i></span>
                             <p class="para_col">Make progress toward a degree</p>
                         </div>
                         <p class="para3_col">Professional Certificate</p>
@@ -1065,7 +1065,7 @@
 
                     <div class="para1_row">
                         <div class="icon_row">
-                            <i class="ri-lightbulb-line"></i>
+                            <span class="icon_bulb"><i class="ri-lightbulb-line"></i></span>
                             <p class="para_col">Make progress toward a degree</p>
                         </div>
                         <p class="para3_col">Professional Certificate</p>
@@ -1084,7 +1084,7 @@
                     </div>
                     <div class="para1_row">
                         <div class="icon_row">
-                            <i class="ri-lightbulb-line"></i>
+                            <span class="icon_bulb"><i class="ri-lightbulb-line"></i></span>
                             <p class="para_col">Make progress toward a degree</p>
                         </div>
                         <p class="para3_col">Professional Certificate</p>
@@ -1103,7 +1103,7 @@
                     </div>
                     <div class="para1_row">
                         <div class="icon_row">
-                            <i class="ri-lightbulb-line"></i>
+                            <span class="icon_bulb"><i class="ri-lightbulb-line"></i></span>
                             <p class="para_col">Make progress toward a degree</p>
                         </div>
                         <p class="para3_col">Professional Certificate</p>
@@ -1705,8 +1705,9 @@
         </div>
     </div>
     <div class="container16">
+
         <div class="c16_grid">
-            <div class="c16_col">
+            <div class="c16_col c16_col1">
                 <h3>Get Started with AI</h3>
                 <a href="#">AWS & DLAI GenAI with LLMs Course</a>
                 <a href="#">DLAI AI For Everyone Course</a>
@@ -1759,7 +1760,7 @@
                 <a href="#">GenAI for Data Professionals</a>
                 <a href="#">Career Insights & Advice Hub</a>
             </div>
-            <div class="c16_col">
+            <div class="c16_col c16_col1">
                 <h3>Coursera</h3>
                 <a href="#">About</a>
                 <a href="#">What We Offer</a>
